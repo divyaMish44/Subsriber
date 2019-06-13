@@ -1,0 +1,15 @@
+<d1></d1>
+<d2></d2>
+<ul>
+  <li ng-repeat="sub in main.subscriptions">
+    <span>
+      {{sub.key}}
+    </span>
+    <div ng-repeat="lis in sub.listeners">
+      <span>
+        {{lis.context}}
+      </span>
+      <button ng-click="main.unsubscribe(sub.key, lis.context)">Unsubscribe</button>
+    </div>
+  </li>
+</ul>
